@@ -22,6 +22,35 @@
     }
     a{text-decoration:none;color:inherit}
     .page{min-height:100vh;padding:18px 22px 28px}
+    .topbar{
+      max-width:var(--max);
+      margin:0 auto 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .topbar-brand{
+      font-size:14px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#5a6370;
+      white-space:nowrap;
+    }
+    .topbar-nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    .topbar-nav a{
+      font-size:14px;
+      color:#4f5864;
+    }
+    .topbar-nav a.active{
+      color:var(--text);
+      font-weight:600;
+    }
     .frame{
       max-width:var(--max);
       margin:0 auto;
@@ -43,7 +72,7 @@
       letter-spacing:.08em;
       text-transform:uppercase;
       color:#5a6370;
-      margin-bottom:56px;
+      margin-bottom:28px;
     }
     h1{
       margin:0;
@@ -226,6 +255,10 @@
       .subtitle{font-size:20px;max-width:680px}
       .cover{max-width:760px;margin:0 auto}
     }
+    @media (max-width: 900px){
+      .topbar{align-items:flex-start;flex-direction:column;gap:12px}
+      .topbar-nav{gap:14px}
+    }
     @media (max-width: 700px){
       .page{padding:14px}
       .frame{gap:22px}
@@ -241,6 +274,18 @@
 </head>
 <body>
   <div class="page">
+    <header class="topbar">
+      <a class="topbar-brand" href="index.html">药厂门口 | Pharma Lobby</a>
+      <nav class="topbar-nav">
+        <a class="active" href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="episodes.html">节目库</a>
+        <a href="guest.html">嘉宾合作</a>
+        <a href="ask.html">匿名提问</a>
+        <a href="contact.html">联系我们</a>
+      </nav>
+    </header>
+
     <main class="frame">
       <section class="left">
         <div class="brand">药厂门口 | Pharma Lobby · Podcast</div>
@@ -310,3 +355,4 @@
   </div>
 </body>
 </html>
+
